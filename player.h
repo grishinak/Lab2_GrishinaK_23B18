@@ -9,7 +9,7 @@ public:
     Player()
     {
         cout << "(player obj is created, his introduction text)" << endl;
-        cout << "hi! i am a knight. we need to save this kingdom from the enemy!" << endl;
+        cout << "hi! i am a knight. we need to defeat the enemy!" << endl;
         cout << "________________________" << endl;
         cout << "player's Attack range is between " << minDamage << " - " << maxDamage << endl;
         cout << "________________________" << endl;
