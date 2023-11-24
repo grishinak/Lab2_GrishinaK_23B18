@@ -18,7 +18,16 @@
 #include "npc.h"//inherited from character class
 
 #include "animal.h"// +4 classes inherited in line from animal: animal-pet-dog-pupppy and tests for them
+#include "pet.h"
+#include "dog.h"
+#include "puppy.h"
 
+// tests
+#include "testweapon.h"
+#include "testInventory.h"
+#include "testmonster.h"
+#include "testboss.h"
+#include "testNPC.h"
 
 using namespace std;
 
@@ -59,30 +68,27 @@ void battleLoop(Player player, Enemy enemy)
         cout << "press A to attack or H to heal" << endl;
         cin >> playerChoice;
         if (playerChoice == 'A' || playerChoice == 'a')
-        {
-
+        {          
             //attack
             enemy.TakeDamage(player.GiveDamage());
 
             if (enemy.GetHealth() > 0)//if enemy alive he attacks
             {
-                cout << "ha ha ha, its my turn now!!!" << endl;
+                cout << "  ha ha ha, its my turn now!!!" << endl;
                 player.TakeDamage(enemy.GiveDamage());
             }
-
 
         }
         else if (playerChoice == 'H' || playerChoice == 'h')
         {
-
             //healing
             player.Heal();
 
             if (enemy.GetHealth() > 0)//if enemy alive he attacks
             {
-                cout << "ha ha ha, its my turn now!!!" << endl;
+                cout << "  ha ha ha, its my turn now!!!" << endl;
+                player.TakeDamage(enemy.GiveDamage());
             }
-
         }
         else
         {
@@ -99,20 +105,22 @@ int main() {
     //puppy is the animal last inherited class test(means that all animals classes work (incapsulation priciple))
     Puppy puppy;
 
+    puppy.SetName("Umka");//set name
+    cout<<"puppy's name is: " << (puppy.GetName()) << endl;// get name
+  
     puppy.makeSound(); // animal's method
     puppy.play(); // pet's method
-    puppy.bark(); // dpg's method
+    puppy.bark(); // dog's method
     puppy.wagTail(); // puppy's method
-
-
+    
 
     // obj inherited from character class tests:
     TestMonster();
     TestBoss();
     TestNPC();
 
-    /* working cli game code    */
-
+    /* working cli game code   */
+     
     gameStory();
 
     char userInput;
