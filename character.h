@@ -5,7 +5,7 @@ class Character {
 public:
     Character(string name, int health, int damage) : name(name), health(health), damage(damage) {}
 
-    string GetName() const {
+    string GetName() const{
         return name;
     }
 
@@ -17,12 +17,7 @@ public:
         return damage;
     }
 
-    void TakeDamage(int damage) {
-        health -= damage;
-        if (health < 0) {
-            health = 0;
-        }
-    }
+    void TakeDamage(int damage);
 
     bool IsAlive() const {
         return health > 0;
