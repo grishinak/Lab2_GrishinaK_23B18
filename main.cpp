@@ -23,11 +23,12 @@
 #include "puppy.h"
 
 // tests
-#include "testweapon.h"
-#include "testInventory.h"
-#include "testmonster.h"
-#include "testboss.h"
-#include "testNPC.h"
+#include "testweapon.cpp"
+#include "testInventory.cpp"
+#include "testmonster.cpp"
+#include "testboss.cpp"
+#include "testNPC.cpp"
+
 
 using namespace std;
 
