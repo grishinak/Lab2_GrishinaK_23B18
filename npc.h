@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 
+#include "character.h"
 
 class NPC : public Character {
 public:
