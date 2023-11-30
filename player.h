@@ -17,10 +17,11 @@ public:
         cout << "________________________" << endl;
     }//constructing object with introdction in terminal
 
+
     int GetHealth()
     {
         return health;
-    }//getter
+    }
 
     void TakeDamage(int damage)
     {
