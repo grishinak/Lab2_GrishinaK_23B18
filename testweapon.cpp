@@ -1,5 +1,7 @@
 #pragma once
-
+#include <cassert>
+#include <iostream>
+#include "weapon.h"
 
 void TestWeapon() {
 
