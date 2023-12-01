@@ -22,15 +22,6 @@
 #include "dog.h"
 #include "puppy.h"
 
-// tests
-#include "testweapon.cpp"
-#include "testInventory.cpp"
-#include "testmonster.cpp"
-#include "testboss.cpp"
-#include "testNPC.cpp"
-
-
-
 
 using namespace std;
 
@@ -44,11 +35,11 @@ void gameStory() {
     cout << "|  You are standing in a dark forest. In front of you is a someone that doesnt look friendly. and i think it is hungry. |" << endl;
     cout << "|                                                                                                                       |" << endl;
     cout << "|  You know you must defeat it to survive. But the enemy seems to be strong, and you do not have much health.           |" << endl;
-    cout << "|                                                                                                                       |" << endl; 
+    cout << "|                                                                                                                       |" << endl;
     cout << "|  You must damage it to weaken it, but you must also remember to heal yourself so you do not die yourself.             |" << endl;
     cout << "|                                                                                                                       |" << endl;
     cout << "|                                                                                                                       |" << endl;
-    cout << "|_______________________________________________________________________________________________________________________|" << endl<< endl << endl;
+    cout << "|_______________________________________________________________________________________________________________________|" << endl << endl << endl;
 
     cout << "______________________________________________________________________________" << endl;
     cout << "|                                 CONTROL INFO                               |" << endl;
@@ -59,7 +50,7 @@ void gameStory() {
     cout << "|  - Heal yourself.                                                          |" << endl;
     cout << "|                                                                            |" << endl;
     cout << "| If you damage the ogre enough, it will die. If you die, the game will end. |" << endl;
-    cout << "|____________________________________________________________________________|" << endl<<endl;
+    cout << "|____________________________________________________________________________|" << endl << endl;
 }
 
 void battleLoop(Player player, Enemy enemy)
@@ -71,15 +62,17 @@ void battleLoop(Player player, Enemy enemy)
         cout << "press A to attack or H to heal" << endl;
         cin >> playerChoice;
         if (playerChoice == 'A' || playerChoice == 'a')
-        {          
+        {
+
             //attack
             enemy.TakeDamage(player.GiveDamage());
 
             if (enemy.GetHealth() > 0)//if enemy alive he attacks
             {
-                cout << "  ha ha ha, its my turn now!!!" << endl;
+                cout << "ha ha ha, its my turn now!!!" << endl;
                 player.TakeDamage(enemy.GiveDamage());
             }
+
 
         }
         else if (playerChoice == 'H' || playerChoice == 'h')
@@ -89,9 +82,10 @@ void battleLoop(Player player, Enemy enemy)
 
             if (enemy.GetHealth() > 0)//if enemy alive he attacks
             {
-                cout << "  ha ha ha, its my turn now!!!" << endl;
+                cout << "ha ha ha, its my turn now!!!" << endl;
                 player.TakeDamage(enemy.GiveDamage());
             }
+
         }
         else
         {
@@ -108,22 +102,20 @@ int main() {
     //puppy is the animal last inherited class test(means that all animals classes work (incapsulation priciple))
     Puppy puppy;
 
-    puppy.SetName("Umka");//set name
-    cout<<"puppy's name is: " << (puppy.GetName()) << endl;// get name
-  
     puppy.makeSound(); // animal's method
     puppy.play(); // pet's method
-    puppy.bark(); // dog's method
+    puppy.bark(); // dpg's method
     puppy.wagTail(); // puppy's method
-    
+
+
 
     // obj inherited from character class tests:
     TestMonster();
     TestBoss();
     TestNPC();
 
-    /* working cli game code   */
-     
+    /* working cli game code    */
+
     gameStory();
 
     char userInput;
