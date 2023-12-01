@@ -7,15 +7,6 @@ public:
     void bark() {
         cout << "dog bark function" << endl;
     }
-    string GetBreed()
-    {
-        return breed;
-    }
-
-    void SetBreed(string valueBreed)
-    {
-        breed = valueBreed;
-    }
 private:
-    string breed;//+ get + set
+    string breed;
 };
