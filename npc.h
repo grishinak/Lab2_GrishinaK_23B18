@@ -2,7 +2,8 @@
 #include <iostream>
 #include <string>
 
-#include "character.h"
+//#include "character.h"
+using namespace std;
 
 class NPC : public Character {
 public:
@@ -14,4 +15,11 @@ public:
 
 private:
     string role;
+};
+void TestNPC() {
+    NPC merchant("Merchant", 100, 10, "Trader");
+    assert(merchant.GetName() == "Merchant");
+    assert(merchant.GetRole() == "Trader");
+
+    cout << " NPC test passed." << endl;
 };
