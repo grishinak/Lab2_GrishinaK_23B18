@@ -89,6 +89,7 @@ void battleLoop(Player player, Enemy enemy)
         {
             cout << "invalid input" << endl;
         }
+         cout << "\n\n" << endl;
     } while (player.GetHealth() > 0 && enemy.GetHealth() > 0);
 }
 
