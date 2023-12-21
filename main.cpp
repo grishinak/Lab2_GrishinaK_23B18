@@ -1,6 +1,6 @@
 #include <iostream>
 #include <ctime>
-
+using namespace std;
 #include <cassert>
 #include <vector>
 #include <string>
@@ -20,7 +20,7 @@
 #include "animal.h"// +4 classes inherited in line from animal: animal-pet-dog-pupppy and tests for them
 
 
-using namespace std;
+
 
 void gameStory() {
 
